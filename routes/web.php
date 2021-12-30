@@ -17,8 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Auth::routes();
 
-require __DIR__.'/auth.php';
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/race/new', [App\Http\Controllers\RaceController::class, 'newRace'])->name('newRace');
+
+Route::post('/race/create', [App\Http\Controllers\RaceController::class, 'createRace'])->name('createRace');
+
+Route::get('/race/{id}', [App\Http\Controllers\RaceController::class, 'getRace'])->name('getRace');
