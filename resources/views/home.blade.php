@@ -14,7 +14,13 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    @foreach ($races as $race)
+                        <a href='/race/{{$race->id}}'>{{$race->name}}</a>
+                        <br>
+                    @endforeach
+                    <br>
+
+                    <a class="btn btn-primary" href="new/race" role="button">{{ __('race.newRace') }}</a>
                 </div>
             </div>
         </div>
