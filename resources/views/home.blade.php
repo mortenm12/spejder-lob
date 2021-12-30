@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
@@ -20,7 +20,7 @@
                     @endforeach
                     <br>
 
-                    <a class="btn btn-primary" href="new/race" role="button">{{ __('race.newRace') }}</a>
+                    <a class="btn btn-primary" href="/race/new" role="button">{{ __('race.newRace') }}</a>
                 </div>
             </div>
         </div>

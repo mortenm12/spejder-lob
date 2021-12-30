@@ -53,4 +53,12 @@ class RaceController extends Controller
         return redirect('/home');
 
     }
+
+    public function getRace($id)
+    {
+        $race = Race::findOrFail($id);
+        return view('race', [
+            'race' => $race
+        ]);
+    }
 }

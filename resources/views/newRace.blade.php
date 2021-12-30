@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('New race') }}</div>
 
                 <div class="card-body">
-                    <form action='/create/race' method='post' autocomplete="off" >
+                    <form action='/race/create' method='post' autocomplete="off" >
                         @csrf
                         <div class="container mb-3">
                             {{ __('race.race name') }}
@@ -23,6 +23,7 @@
                             <input type='datetime-local' name='endTime' class="form-control">
                         </div>
                         <button tupe='submit' class='btn btn-primary btn-block'> {{ __('race.save') }} </button>
+                        <a class="btn btn-primary" href="/home" role="button">{{ __('race.back') }}</a>
                     </form>
                 </div>
             </div>

@@ -6,5 +6,7 @@ return [
     'start time' => 'Start tidspunkt',
     'end time' => 'Slut tidspunkt',
     'save' => 'Gem',
+    'back' => 'Tilbage',
+    'race' => 'Løb',
 
 ];
